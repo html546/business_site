@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.imageuploader.css">
+    <style>
+        .upload{
+            overflow: hidden;
+        }
+        .uploader__contents {
+            padding: 2em;
+        }
+
+        .example {
+            width: 100%;
+            padding: 0 50px;
+            float: left;
+        }
+
+        .example p {
+            text-align: left;
+            box-sizing: border-box
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upload">
+        <div class="uploader__box js-uploader__box l-center-box">
+            <form action="./login.html" method="POST">
+                <div class="uploader__contents">
+                    <label class="button button--secondary" for="fileinput">选择文件</label>
+                    <input id="fileinput" class="uploader__file-input" type="file" multiple value="Select Files">
+                </div>
+                <input class="button button--big-bottom" type="submit" value="Upload Selected Files">
+            </form>
+        </div>
+        <div class="example">
+            <p>文件格式实例</p>
+            <img src="./images/table.jpg" alt="">
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/jquery.imageuploader.js"></script>
+    <script>
+        $('.js-uploader__box').uploader({
+            //配置参数
+            'selectButtonCopy': '请选择或拖拽文件',
+            'instructionsCopy': '你可以选择或拖拽多个文件',
+            'submitButtonCopy': '上传选择的文件',
+            'furtherInstructionsCopy': '你可以选择或拖拽更多的文件',
+            'secondarySelectButtonCopy': '选择更多的文件',
+            'badFileTypeMessage': '对不起，我们现在暂不支持这种文件格式',
+            'fileTypeWhiteList': ['xls']
+        });
+    </script>
+</body>
+
+</html>

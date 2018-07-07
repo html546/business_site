@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index1.css">
+    <link rel="stylesheet" href="./css/styles.imageuploader.css">
+    <style>
+        .l-center-box{
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <nav class="navbar navbar-default navbar_default1">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="javascript:;" class="navbar-brand navbar-logo">
+                    LOGO
+                </a>
+                <p class="navbar-text navbar-right">13823532942 /
+                    <a href="javascript:;" class="navbar-link">退出</a>
+                </p>
+            </div>
+        </div>
+    </nav>
+    <!-- 中间部分 -->
+    <div class="my-panel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <div class="panel-left">
+                        <ul>
+                            <li class="active">
+                                <a href="javascript:;">
+                                    <span></span>购买信息
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span></span>我的订单
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-10">
+                    <div class="panel-right">
+                        <div class="panel-top">
+                            <span></span>
+                            <p>付款</p>
+                        </div>
+                        <div class="panel-content1">
+                            <div class="pay">
+                                <p>扫一扫付款
+                                    <span>
+                                        <i>300</i>元</span>
+                                </p>
+                                <img src="./images/alipay.jpg" alt="">
+                                <img src="./images/wechat.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="panel-top">
+                            <span></span>
+                            <p>上传凭证</p>
+                        </div>
+                        <div class="panel-content1">
+                            <div class="pay">
+                                <p>请上传付款成功页面截图</p>
+                            </div>
+                            <div class="uploader__box js-uploader__box l-center-box">
+                                <form action="./login.html" method="POST">
+                                    <div class="uploader__contents">
+                                        <label class="button button--secondary" for="fileinput">选择文件</label>
+                                        <input id="fileinput" class="uploader__file-input" type="file" multiple value="Select Files">
+                                    </div>
+                                    <input class="button button--big-bottom" type="submit" value="Upload Selected Files">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="panel-foot">
+                            <button>提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <p>2015-2025 山东六牛网络科技有限公司 ALL RIGHTRESERVED http://www.liuniukeji.com 通用网址 粤ICP备15035918</p>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/jquery.imageuploader.js"></script>
+    <script>
+        $('.js-uploader__box').uploader({
+            //配置参数
+            'selectButtonCopy': '请选择或拖拽文件',
+            'instructionsCopy': '你可以选择或拖拽多个文件',
+            'submitButtonCopy': '上传选择的文件',
+            'furtherInstructionsCopy': '你可以选择或拖拽更多的文件',
+            'secondarySelectButtonCopy': '选择更多的文件',
+            'badFileTypeMessage': '对不起，我们现在暂不支持这种文件格式',
+            'fileTypeWhiteList': ['jpg','png','gif','jpeg']
+        });
+    </script>
+</body>
+
+</html>

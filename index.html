@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index1.css">
+</head>
+
+<body>
+    <!-- 导航 -->
+    <nav class="navbar navbar-default navbar_default1">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="javascript:;" class="navbar-brand navbar-logo">
+                    LOGO
+                </a>
+                <p class="navbar-text navbar-right">13823532942 /
+                    <a href="javascript:;" class="navbar-link">退出</a>
+                </p>
+            </div>
+        </div>
+    </nav>
+    <!-- 中间部分 -->
+    <div class="my-panel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <div class="panel-left">
+                        <ul>
+                            <li class="active">
+                                <a href="javascript:;">
+                                    <span></span>购买信息
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span></span>我的订单
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-10">
+                    <div class="panel-right">
+                        <div class="panel-top">
+                            <span></span>
+                            <p>购买信息</p>
+                            <button>增加条目</button>
+                            <button>EXCEL批量导入</button>
+                        </div>
+                        <div class="panel-content">
+                            <form action="">
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label for="">
+                                            <div class="checkbox_group">
+                                                <input type="checkbox" class="checkAll">
+                                                <span class="checkbox_falsy"></span>
+                                            </div>
+                                            全选
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label for="">
+                                            <div class="checkbox_group checkbox_group2">
+                                                <input type="checkbox" value="1" class="checkOne">
+                                                <span class="checkbox_falsy"></span>
+                                            </div>
+                                            <span>1.</span>
+                                            <input type="text" placeholder="国家" name="company">
+                                            <span> — </span>
+                                            <input type="address" placeholder="编码" name="address">
+                                            <a href="javascript:;">
+                                                <span></span>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label for="">
+                                            <div class="checkbox_group checkbox_group2">
+                                                <input type="checkbox" value="2" class="checkOne">
+                                                <span class="checkbox_falsy"></span>
+                                            </div>
+                                            <span>2.</span>
+                                            <input type="text" placeholder="国家" name="company">
+                                            <span> — </span>
+                                            <input type="address" placeholder="编码" name="address">
+                                            <a href="javascript:;">
+                                                <span></span>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label for="">
+                                            <div class="checkbox_group checkbox_group2">
+                                                <input type="checkbox" value="3" class="checkOne">
+                                                <span class="checkbox_falsy"></span>
+                                            </div>
+                                            <span>3.</span>
+                                            <input type="text" placeholder="国家" name="company">
+                                            <span> — </span>
+                                            <input type="address" placeholder="编码" name="address">
+                                            <a href="javascript:;">
+                                                <span></span>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </form>
+                            
+                        </div>
+                        <div class="panel-foot">
+                            <button>提交</button>
+                            <p>合计:
+                                <span class="price">
+                                    <i>300</i>元</span>
+                                <span>(6条)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <p>2015-2025 山东六牛网络科技有限公司 ALL RIGHTRESERVED http://www.liuniukeji.com 通用网址 粤ICP备15035918</p>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/layer.js"></script>
+    <script>
+        $(function () {
+            $('.checkAll').click(function () {
+                if ($(this).prop('checked') == true) {
+                    $('.checkOne').prop('checked', true);
+                } else {
+                    $('.checkOne').prop('checked', false);
+                }
+            })
+            $('.panel-top button:last-of-type').click(function () {
+                layer.open({
+                    type: 2,
+                    title: 'EXCEL批量导入',
+                    shadeClose: true,
+                    shade: [.8, '#333'],
+                    maxmin: true,
+                    area: ['540px', '508px'],
+                    content: './upload.html'
+                })
+            })
+           
+        })
+    </script>
+</body>
+
+</html>
