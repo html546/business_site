@@ -120,7 +120,7 @@
                                 </div>
 
                             </form>
-                            
+
                         </div>
                         <div class="panel-foot">
                             <button>提交</button>
@@ -157,12 +157,20 @@
                     title: 'EXCEL批量导入',
                     shadeClose: true,
                     shade: [.8, '#333'],
-                    maxmin: true,
-                    area: ['540px', '508px'],
-                    content: './upload.html'
+                    // maxmin: true,
+                    area: ['540px', '548px'],
+                    content: './upload.html',
+                    success: function (layero, index) {
+                        var body = layer.getChildFrame('body', index);
+                        var iframeWin = window[layero.find('iframe')[0]['name']];
+                        layer.photos({
+                            photos: iframeWin.document.getElementById('layer-photos-demo'),
+                            anim: 5
+                        })
+                    }
                 })
             })
-           
+
         })
     </script>
 </body>
