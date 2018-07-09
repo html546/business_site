@@ -10,10 +10,18 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/index1.css">
-    <link rel="stylesheet" href="./css/styles.imageuploader.css">
+    <!-- <link rel="stylesheet" href="./css/styles.imageuploader.css"> -->
+    <link rel="stylesheet" href="./dist/css/dropify.min.css">
     <style>
-        .l-center-box{
+        .l-center-box {
             margin-left: 0;
+        }
+        .dropify-wrapper {
+            box-sizing: border-box;
+            width: 360px;
+        }
+        .panel-foot button{
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -76,7 +84,7 @@
                             <div class="pay">
                                 <p>请上传付款成功页面截图</p>
                             </div>
-                            <div class="uploader__box js-uploader__box l-center-box">
+                            <!-- <div class="uploader__box js-uploader__box l-center-box">
                                 <form action="./login.html" method="POST">
                                     <div class="uploader__contents">
                                         <label class="button button--secondary" for="fileinput">选择文件</label>
@@ -84,7 +92,8 @@
                                     </div>
                                     <input class="button button--big-bottom" type="submit" value="Upload Selected Files">
                                 </form>
-                            </div>
+                            </div> -->
+                            <input type="file" class="dropify" id="input-file-now" data-height="150" data-max-file-size="3M" data-default-file="">
                         </div>
                         <div class="panel-foot">
                             <button>提交</button>
@@ -100,9 +109,10 @@
     </div>
     <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="./js/jquery.imageuploader.js"></script>
+    <!-- <script src="./js/jquery.imageuploader.js"></script> -->
+    <script src="./dist/js/dropify.min.js"></script>
     <script>
-        $('.js-uploader__box').uploader({
+        /* $('.js-uploader__box').uploader({
             //配置参数
             'selectButtonCopy': '请选择或拖拽文件',
             'instructionsCopy': '你可以选择或拖拽多个文件',
@@ -111,6 +121,14 @@
             'secondarySelectButtonCopy': '选择更多的文件',
             'badFileTypeMessage': '对不起，我们现在暂不支持这种文件格式',
             'fileTypeWhiteList': ['jpg','png','gif','jpeg']
+        }); */
+        $('.dropify').dropify({
+            messages: {
+                'default': '点击或拖拽截图文件到这里',
+                'replace': '点击或拖拽文件到这里来替换文件',
+                'remove': '移除文件',
+                'error': '对不起,你上传的文件太大了'
+            }
         });
     </script>
 </body>
