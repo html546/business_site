@@ -37,7 +37,7 @@
             li {
                 height: 54px;
                 line-height: 54px;
-                &:first-child{
+                &:first-child {
                     margin-top: 16px;
                 }
                 &.active {
@@ -360,4 +360,29 @@
     color: #8cb7f2;
     font-size: 12px;
     margin-top: 8px;
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    .my-panel .panel-left ul li.active:first-child::before,
+    .my-panel .panel-left ul li.active:last-child::before,
+    .my-panel .panel-left ul li:first-child::before,
+    .my-panel .panel-left ul li:last-child:before {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 10px;
+        top: 5px;
+    }
+    .my-panel .panel-left ul li.active:first-child::before {
+        content: url(../images/sidebar_icon_buy_s.png);
+    }
+    .my-panel .panel-left ul li.active:last-child::before {
+        content: url(../images/sidebar_icon_order_n.png);
+    }
+    .my-panel .panel-left ul li:first-child::before {
+        content: url(../images/sidebar_icon_buy_s.jpg);
+    }
+    .my-panel .panel-left ul li:last-child:before {
+        content: url(../images/sidebar_icon_order_n.jpg);
+    }
 }
